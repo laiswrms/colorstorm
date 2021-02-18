@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>COLORSTORM</title>
+  <meta name="description" content="layout_colorstorm">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="icon" href="lamp.png" type="image/png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/game.css">
+
+
+
+</head>
+
+  <body>
+  
+    <header>
+      <nav>
+        <h1>
+          <a href="#"><img src="img/Logo.png" alt="pagina inicial"></a>
+        </h1>
+      </nav>
+    </header>
+  
+  <section id="menu">
+        <nav>
+            <ul>
+              <li><a href="#">Início</a></li>
+              <li><a href="#">Lógica</a></li>
+              <li><a href="#">Raciocínio</a></li>
+              <li><a href="#">Jogos</a></li>
+              <li><a href="#">Quiz</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+        </nav>
+  </section>
+  
+  <section>
+      <h1>ColorStorm</h1>
+        <p>O jogo tem como objetivo testar a memória do jogador, ele possui 4 quadrados com cores distintas nos quais uma sequência
+            de cores é mostrada por um curto período de tempo para sua memorização, após isso sua meta é reproduzir as cores na ordem correta. </p>
+  </section>
+  
+  <section id="conteudo">
+    <div id="iniciar">
+      <div id="botao-iniciar">
+        START
+      </div>
+    </div>
+  <div id="game--container">
+    <div id="restart" onclick="restartGame()">
+      <p id="level">PLAY</p>
+    </div>
+    <div id="game--items" onclick="itemClick(event)">
+      <div class="item red" data-color="1"></div>
+      <div class="item blue" data-color="2"></div>
+      <div class="item green" data-color="3"></div>
+      <div class="item yellow" data-color="4"></div>
+    </div>
+  </div>
+  </section>
+
+  <!-- SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+   
+  <script>
+    jQuery('document').ready(function() { 
+      jQuery("#botao-iniciar").on("click", function() {
+        jQuery("#iniciar").fadeOut(200);
+        jQuery("#game--container").delay(200).fadeIn(200);
+      });
+    });
+  </script>
+
+  
+  </body>
+  
+
+</html>
